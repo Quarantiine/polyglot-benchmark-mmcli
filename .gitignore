@@ -1,0 +1,44 @@
+# Build artifacts and directories
+build/
+bin/
+obj/
+lib/
+target/
+dist/
+
+# C++
+*.o
+*.out
+*.exe
+
+# Go
+*.test
+
+# Java
+.gradle/
+
+# JavaScript
+node_modules/
+coverage/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.pytest_cache/
+
+# Rust
+# (target/ is already covered above)
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
