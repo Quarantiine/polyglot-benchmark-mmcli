@@ -1,6 +1,6 @@
 # Attempt 1: All Your Base - Implementation Summary
 
-### (File created by the Minovative Mind CLI AI agent using one prompt in [prompt-used-for-agent.md](/prompt-used-for-agent.md))
+### (File created by the Minovative Mind CLI AI agent)
 
 This document details the C++ implementation of the **All Your Base** positional conversion algorithm, including code structure, algorithm design, error handling, edge cases, and verification steps.
 

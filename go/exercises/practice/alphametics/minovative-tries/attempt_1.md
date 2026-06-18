@@ -1,5 +1,7 @@
 # Attempt 1: Highly Optimized Backtracking Solver with Rearrangement-Inequality Pruning
 
+### (File created by the Minovative Mind CLI AI agent)
+
 ## Approach
 
 To solve the Alphametics puzzle efficiently, we formulated the puzzle as a system of linear equations of digit variables. Given up to 10 unique letter variables, a naive backtracking search would inspect up to $10! = 3,628,800$ permutations. By introducing a mathematical pruning method based on the **Rearrangement Inequality**, we cut down the search space to a near straight-line path, reducing execution times from seconds to microseconds.
@@ -53,6 +55,7 @@ To maximize performance:
 
 ## Agent Autonomous Workflow Debug Logs & Conversation History From Minovative Mind CLI
 
+```txt
 ◇ ❯
 │ /paste
 │
@@ -89,7 +92,7 @@ You must follow these STRICT RULES:
 > ◇ 🔍 Investigation completed.
 > │
 > ◓ Thinking[DEBUG] Proxy Request to gemini-3.5-flash complete. Status: 200 OK
-> ◇  
+> ◇
 > [DEBUG] Initial functionCalls: [{"name":"list_directory","args":{"dirPath":"."}}]
 > │
 > ◇ 📂 Listing directory: .
@@ -172,3 +175,4 @@ All test cases pass successfully in sub-millisecond times, and the attempt log h
 ● Credits Remaining: 16,953
 │
 ● Generated in 311.2s
+```
