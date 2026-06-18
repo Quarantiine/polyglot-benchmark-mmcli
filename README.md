@@ -18,6 +18,12 @@ Here is a log of the programming exercises the agent has autonomously completed,
   - **Result**: 🟢 PASSED (17/17 assertions)
   - **Performance Summary**: The agent successfully deduced the $O(N + M)$ conversion algorithm and properly handled the complex edge cases for zero-equivalents (returning an empty vector). During execution, it encountered a compilation error due to missing C++ standard library paths on macOS. It autonomously self-corrected by querying the environment, locating the sysroot, updating its `clang++` flags, and flawlessly passing the test suite. It handled the problem and edge cases on the first try. The environment was the main test it had to figure out.
 
+### Go Track
+
+- **[Alphametics](go/exercises/practice/alphametics/minovative-tries/attempt_1.md)**
+  - **Result**: 🟢 PASSED
+  - **Performance Summary**: The agent solved one of the hardest logic puzzles on the platform by engineering a mathematically rigorous pruning algorithm based on the **Rearrangement Inequality**. By doing so, it completely bypassed naive backtracking ($10!$ permutations) to achieve sub-millisecond execution speeds (~140 microseconds) with zero heap allocations during recursion. It autonomously navigated the Go toolchain (`go test -bench=.`) and parsed its own architectural performance warnings.
+
 ## How The Agent is Tested
 
 To ensure a fair evaluation, the agent is subjected to strict anti-cheating constraints during these tests:
