@@ -24,6 +24,17 @@ Here is a log of the programming exercises the agent has autonomously completed,
   - **Result**: 🟢 PASSED
   - **Performance Summary**: The agent solved one of the hardest logic puzzles on the platform by engineering a mathematically rigorous pruning algorithm based on the **Rearrangement Inequality**. By doing so, it completely bypassed naive backtracking ($10!$ permutations) to achieve sub-millisecond execution speeds (~140 microseconds) with zero heap allocations during recursion. It autonomously navigated the Go toolchain (`go test -bench=.`) and parsed its own architectural performance warnings.
 
+## Custom Benchmark Tracks
+
+While the Exercism tracks focus on core software engineering logic, the benchmark suite is expanding to test the agent's capabilities in advanced STEM domains:
+
+### Robotics & Linear Algebra (ROB101)
+
+- **[ROB101 Benchmark Suite](rob101-benchmarks/README.md)**
+  - **Status**: Work in Progress
+  - **Goal**: Push the agent's capacity as an **autonomous STEM reasoning engine**.
+  - **Details**: Tests the agent against real-world, university-level Computational Linear Algebra projects sourced from the University of Michigan Robotics 101 course. It evaluates the agent's ability to translate raw math formulas into working code and maintain spatial awareness across complex multidimensional arrays.
+
 ## How The Agent is Tested
 
 To ensure a fair evaluation, the agent is subjected to strict anti-cheating constraints during these tests:
