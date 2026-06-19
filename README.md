@@ -35,7 +35,7 @@ While the Exercism tracks focus on core software engineering logic, the benchmar
   - **Goal**: Push the agent's capacity as an **autonomous STEM reasoning engine**.
   - **Details**: Tests the agent against real-world, university-level Computational Linear Algebra projects sourced from the University of Michigan Robotics 101 course. It evaluates the agent's ability to translate raw math formulas into working code and maintain spatial awareness across complex multidimensional arrays.
 
-## How The Agent is Tested
+## How The Agent is Tested (Exercism Tracks Only)
 
 To ensure a fair evaluation, the agent is subjected to strict anti-cheating constraints during these tests:
 
