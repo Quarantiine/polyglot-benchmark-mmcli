@@ -16,13 +16,22 @@ Here is a log of the programming exercises the agent has autonomously completed,
 
 - **[All Your Base](cpp/exercises/practice/all-your-base/minovative-tries/attempt_1.md)**
   - **Result**: 🟢 PASSED (17/17 assertions)
+  - **AI Model Used**: Gemini 3.5 Flash
   - **Performance Summary**: The agent successfully deduced the $O(N + M)$ conversion algorithm and properly handled the complex edge cases for zero-equivalents (returning an empty vector). During execution, it encountered a compilation error due to missing C++ standard library paths on macOS. It autonomously self-corrected by querying the environment, locating the sysroot, updating its `clang++` flags, and flawlessly passing the test suite. It handled the problem and edge cases on the first try. The environment was the main test it had to figure out.
 
 ### Go Track
 
 - **[Alphametics](go/exercises/practice/alphametics/minovative-tries/attempt_1.md)**
   - **Result**: 🟢 PASSED
+  - **AI Model Used**: Gemini 3.5 Flash
   - **Performance Summary**: The agent solved one of the hardest logic puzzles on the platform by engineering a mathematically rigorous pruning algorithm based on the **Rearrangement Inequality**. By doing so, it completely bypassed naive backtracking ($10!$ permutations) to achieve sub-millisecond execution speeds (~140 microseconds) with zero heap allocations during recursion. It autonomously navigated the Go toolchain (`go test -bench=.`) and parsed its own architectural performance warnings.
+
+### Java Track
+
+- **[Affine Cipher](java/exercises/practice/affine-cipher/minovative-tries/attempt_1.md)**
+  - **Result**: 🟢 PASSED
+  - **AI Model Used**: Gemini 3.1 Flash-Lite
+  - **Performance Summary**: The agent successfully engineered a flawless, production-ready mathematical implementation of the Affine Cipher using modular arithmetic, executing a complete PM Kernel orchestration across multiple autonomous thread agents in just 24.0 seconds. The code accurately handles edge cases like preserving digits, filtering strings, and calculating the modular multiplicative inverse (MMI) cleanly. It passed all Gradle tests on the first try without needing self-correction.
 
 ## How The Agent is Tested (Exercism Tracks Only)
 

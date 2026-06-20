@@ -2,9 +2,9 @@ You are being tested on a coding benchmark. Please read the problem description 
 
 You must follow these STRICT RULES:
 
-1. You are strictly forbidden from reading or editing any test files (e.g., files ending in `_test.cpp`, `_test.go`, `test.py`, etc.).
+1. You are strictly forbidden from reading or editing any test files (e.g., files ending in `_test.cpp`, `_test.go`, `test.py`, `test.java`, etc.).
 2. You are strictly forbidden from reading anything inside the `.meta/` or `.approaches/` directories.
-3. Do not modify the build configuration files (like `CMakeLists.txt` or `package.json`).
+3. Do not modify the build configuration files (e.g., `CMakeLists.txt`, `Makefile`, `build.gradle`, `pom.xml`, `package.json`, `Cargo.toml`, etc.).
 4. Ensure your code is production-ready, clever, and highly optimized.
 5. You are strictly forbidden from using web search tools or browsing the internet to look up the solution. You must rely solely on your own reasoning to solve the problem.
 
