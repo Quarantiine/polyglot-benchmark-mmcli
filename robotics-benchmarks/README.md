@@ -1,8 +1,8 @@
 # ROB101 Benchmark Suite
 
-This directory is dedicated to testing the **Minovative Mind CLI (`mmcli`)** against real-world, university-level Computational Linear Algebra projects.
+This directory is dedicated to testing the [Minovative Mind CLI (`mmcli`)](https://www.minovativemind.dev/) against real-world, university-level Computational Linear Algebra projects (robotics-focused).
 
-These projects are sourced from the [University of Michigan Robotics 101](https://github.com/michiganrobotics/rob101/tree/main/Fall%202020/Projects) repository.
+These projects are primarily sourced from the [University of Michigan Robotics 101](https://github.com/michiganrobotics/rob101/tree/main/Fall%202020/Projects) repository.
 
 ## Goal
 
@@ -13,3 +13,8 @@ By feeding the agent these projects, we test its ability to:
 1. Translate raw mathematical formulas (e.g., matrix decompositions, kinematics) into working code.
 2. Maintain spatial and dimensional awareness across complex linear algebra arrays.
 3. Utilize its PCV Engine to autonomously resolve mathematical or code problems seamlessly
+4. Follow instructions precisely without hallucinating or misinterpreting complex instructions and constraints.
+
+---
+
+> _Prompt being used for the agent for the robotics benchmark test [`prompt-for-agent.md`](./prompt-for-agent.md)_
