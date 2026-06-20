@@ -36,7 +36,7 @@ For the exact prompt used to enforce these rules during the benchmark, see [prom
 
 ---
 
-## Custom Benchmark Tracks
+## Custom Benchmark Track
 
 While the Exercism tracks focus on core software engineering logic, the benchmark suite is expanding to test the agent's capabilities in advanced STEM domains:
 
