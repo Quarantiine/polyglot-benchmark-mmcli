@@ -12,12 +12,12 @@ This repository serves as a strict proving ground for the `mmcli` agent.
 
 Here is a log of the programming exercises the agent has autonomously completed, alongside a summary of its performance:
 
-### C++ Track
+### JavaScript Track
 
-- **[All Your Base](cpp/exercises/practice/all-your-base/minovative-tries/attempt_1.md)**
-  - **Result**: 🟢 PASSED (17/17 assertions)
+- **[React (Reactive System)](javascript/exercises/practice/react/minovative-tries/attempt_1.md)**
+  - **Result**: 🟢 PASSED
   - **AI Model Used**: Gemini 3.5 Flash
-  - **Performance Summary**: The agent successfully deduced the $O(N + M)$ conversion algorithm and properly handled the complex edge cases for zero-equivalents (returning an empty vector). During execution, it encountered a compilation error due to missing C++ standard library paths on macOS. It autonomously self-corrected by querying the environment, locating the sysroot, updating its `clang++` flags, and flawlessly passing the test suite. It handled the problem and edge cases on the first try. The environment was the main test it had to figure out.
+  - **Performance Summary**: The agent engineered a complete reactive state machine. It initially failed complex test cases involving duplicate callback firing and cyclic updates. However, it autonomously debugged its own failures by creating a `debug.log`, reading the Jest stack traces, and self-correcting. It implemented a true Depth-First Search (DFS) topological sort and transactional state snapshots to pass all 13/13 tests. The PM Kernel (Main AI Agent) accurately audited the final code and warned about an $O(n^2)$ nested loop, demonstrating advanced automated code review capabilities.
 
 ### Go Track
 
@@ -25,6 +25,13 @@ Here is a log of the programming exercises the agent has autonomously completed,
   - **Result**: 🟢 PASSED
   - **AI Model Used**: Gemini 3.5 Flash
   - **Performance Summary**: The agent solved one of the hardest logic puzzles on the platform by engineering a mathematically rigorous pruning algorithm based on the **Rearrangement Inequality**. By doing so, it completely bypassed naive backtracking ($10!$ permutations) to achieve sub-millisecond execution speeds (~140 microseconds) with zero heap allocations during recursion. It autonomously navigated the Go toolchain (`go test -bench=.`) and parsed its own architectural performance warnings.
+
+### C++ Track
+
+- **[All Your Base](cpp/exercises/practice/all-your-base/minovative-tries/attempt_1.md)**
+  - **Result**: 🟢 PASSED (17/17 assertions)
+  - **AI Model Used**: Gemini 3.5 Flash
+  - **Performance Summary**: The agent successfully deduced the $O(N + M)$ conversion algorithm and properly handled the complex edge cases for zero-equivalents (returning an empty vector). During execution, it encountered a compilation error due to missing C++ standard library paths on macOS. It autonomously self-corrected by querying the environment, locating the sysroot, updating its `clang++` flags, and flawlessly passing the test suite. It handled the problem and edge cases on the first try. The environment was the main test it had to figure out.
 
 ### Java Track
 
