@@ -4,6 +4,8 @@
 
 This log provides a detailed summary of the architectural design, implementation details, and test verification process for the reactive programming system built in `react.js`.
 
+- [Agent's Changes](/javascript/exercises/practice/react/react.js)
+
 ---
 
 ## 1. Architectural Purpose & Overview

@@ -4,6 +4,8 @@
 
 This document details the C++ implementation of the **All Your Base** positional conversion algorithm, including code structure, algorithm design, error handling, edge cases, and verification steps.
 
+- [Agent's Changes](/cpp/exercises/practice/all-your-base/all_your_base.cpp)
+
 ---
 
 ## 1. Algorithm Overview
