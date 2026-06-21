@@ -33,6 +33,7 @@ The MMI $a^{-1}$ is calculated using a brute-force approach (since $m=26$ is ver
 
 ## Agent Autonomous Workflow Debug Logs & Conversation History From Minovative Mind CLI
 
+```txt
 ◇ ❯
 │ /paste
 │
@@ -73,7 +74,7 @@ You must follow these STRICT RULES:
 > [DEBUG] Final compressed context injection size: 15475 chars
 > ◇ 🔍 Investigation completed.
 > │
-> ◇  
+> ◇
 > │
 > ◇ Orchestrator: Planning task execution...
 > [DEBUG] Proxy Request to gemini-3.1-flash-lite complete. Status: 200 OK
@@ -136,3 +137,4 @@ You must follow these STRICT RULES:
 │
 ● Orchestration finished in 24.0s
 [DEBUG] Proxy Request to gemini-3.1-flash-lite complete. Status: 200 OK
+```

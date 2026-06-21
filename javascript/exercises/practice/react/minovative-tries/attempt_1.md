@@ -179,7 +179,7 @@ To rigorously test our implementation, we bypassed standard test skipping (the `
 
 ## Agent Autonomous Workflow Debug Logs & Conversation History From Minovative Mind CLI
 
-```text
+```txt
 # [ A LITTLE WAS CUTOFF FROM BEING LONG IN THE TERMINAL, ]
 # [ BUT STILL GOT THE FULL VIEW OF CAPABILITIES ]
 
