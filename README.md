@@ -10,7 +10,9 @@ This repository serves as a strict proving ground for the `mmcli` agent.
 
 ## Completed Benchmark Results
 
-Here is a log of the programming exercises the agent has autonomously completed, alongside a summary of its performance:
+*(For a full list of all benchmarks the agent has passed, including easier exercises, see [COMPLETED_BENCHMARKS.md](COMPLETED_BENCHMARKS.md))*
+
+Here is a log of the top 4 hardest programming exercises the agent has autonomously completed, alongside a summary of its performance:
 
 ### JavaScript Track
 
