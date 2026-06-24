@@ -8,18 +8,4 @@
 4. Ensure your code is production-ready, clever, and highly optimized.
 5. You are strictly forbidden from using web search tools or browsing the internet to look up the solution. You must rely solely on your own reasoning to solve the problem.
 
-When you have finished implementing the solution, run the test file in the tests folder first but remove any ignore or anything related to that so that all tests run, then create a directory called `minovative-tries` if it doesn't already exist. Inside it, create a file named `attempt_[N].md`. In this file, write a detailed summary of your approach and changes based on your code you just wrote so I have a historical log of your logic.
-
-## `attempt_[N].md` File Example Structure:
-
-```markdown
-[TITLE]
-[SUMMARY]
-
-- [Agent's Changes](FULL_FILE_PATH_TO_EDITED_FILE)
-- [Instructions](FULL_FILE_PATH_TO_INSTRUCTIONS)
-
-[EXTENDED-DETAILED-SUMMARY]
-```
-
-> _Dont include the example markers though that may look like this [MARKERS]. Replace them with actually markdown text based on your changes._
+When you have finished implementing the solution, run the test file in the tests folder first but remove any ignore or anything related to that so that all tests run, then create a directory called `minovative-tries` if it doesn't already exist. Inside it, create a file named `attempt_[N].md`. In this file, write a detailed explanation of your approach and changes based on your code you just wrote so I have a historical log of your logic.
