@@ -1,5 +1,7 @@
 # Implementation Approach: Shift Cipher in Rust
 
+### (File created by the Minovative Mind CLI AI agent)
+
 ## Summary
 
 The goal is to implement a substitution cipher in Rust that supports both custom keys and random key generation. The implementation will handle character shifting based on the alphabetical index of the key characters (a=0, b=1, ..., z=25).

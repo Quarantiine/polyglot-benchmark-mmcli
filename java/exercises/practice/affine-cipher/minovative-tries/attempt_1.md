@@ -1,5 +1,7 @@
 # Implementation Approach: Affine Cipher
 
+### (File created by the Minovative Mind CLI AI agent)
+
 ## Overview
 
 The Affine Cipher implementation follows the mathematical definition $E(x) = (ax + b) \pmod m$ and $D(y) = a^{-1}(y - b) \pmod m$, where $m=26$

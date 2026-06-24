@@ -1,5 +1,7 @@
 # Implementation Summary: School Class
 
+### (File created by the Minovative Mind CLI AI agent)
+
 ## Summary
 
 Implemented the `School` class in `grade_school.py` to manage student rosters, grades, and prevent duplicate student additions.

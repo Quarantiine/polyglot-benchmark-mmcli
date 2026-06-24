@@ -1,5 +1,7 @@
 # Gigasecond Implementation
 
+### (File created by the Minovative Mind CLI AI agent)
+
 ## Approach
 
 - [Agent's Changes](/rust/exercises/practice/gigasecond/src/lib.rs)

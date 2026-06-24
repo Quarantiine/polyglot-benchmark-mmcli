@@ -1,5 +1,7 @@
 # Attempt 1: Bowling Game Scorer
 
+### (File created by the Minovative Mind CLI AI agent)
+
 ## Approach
 
 - [Agent's Changes](/rust/exercises/practice/bowling/src/lib.rs)

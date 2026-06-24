@@ -38,6 +38,14 @@ This file contains a comprehensive list of all benchmarks that the Minovative Mi
   - **AI Model Used**: Gemini 3.1 Flash-Lite
   - **Performance Summary**: The agent successfully engineered a flawless, production-ready mathematical implementation of the Affine Cipher using modular arithmetic, executing a complete PM Kernel orchestration across multiple autonomous thread agents in just 24.0 seconds. The code accurately handles edge cases like preserving digits, filtering strings, and calculating the modular multiplicative inverse (MMI) cleanly. It passed all Gradle tests on the first try without needing self-correction.
 
+### Python Track
+
+- **[Zebra Puzzle](python/exercises/practice/zebra-puzzle/minovative-tries/attempt_1.md)**
+  - **Result**: 🟢 PASSED
+  - **Difficulty**: 🟡 Hard
+  - **AI Model Used**: Gemini 3.1 Flash-Lite
+  - **Performance Summary**: The agent was assigned this classic constraint satisfaction problem. Interestingly, instead of blindly memorizing the answer or attempting to fit all logic into the required file, the agent leveraged its autonomous environment. It created and executed a temporary background Python script (`run_debug_script`) 6 consecutive times, iterating on a custom solver algorithm until it successfully calculated the correct answer. It then discarded the scratchpad and wrote a clean, hardcoded solution into the final file, successfully passing all unit tests. This benchmark perfectly validated the framework's interactive tool-use capabilities.
+
 ## Medium Difficulty (🟠)
 
 ### Rust Track
