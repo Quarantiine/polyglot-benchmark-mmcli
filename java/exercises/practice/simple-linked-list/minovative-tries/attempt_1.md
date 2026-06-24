@@ -7,6 +7,7 @@
 Implement a singly linked list in Java with support for `push`, `pop`, `reverse`, `asArray`, and `size` operations.
 
 - [Agent's Changes](./../src/main/java/SimpleLinkedList.java)
+- [Instructions](./../.docs/instructions.md)
 
 ---
 

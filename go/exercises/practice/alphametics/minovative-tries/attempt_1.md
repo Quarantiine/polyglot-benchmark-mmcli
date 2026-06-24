@@ -7,6 +7,7 @@
 To solve the Alphametics puzzle efficiently, we formulated the puzzle as a system of linear equations of digit variables. Given up to 10 unique letter variables, a naive backtracking search would inspect up to $10! = 3,628,800$ permutations. By introducing a mathematical pruning method based on the **Rearrangement Inequality**, we cut down the search space to a near straight-line path, reducing execution times from seconds to microseconds.
 
 - [Agent's Changes](/go/exercises/practice/alphametics/alphametics.go)
+- [Instructions](/go/exercises/practice/alphametics/.docs/instructions.md)
 
 ---
 

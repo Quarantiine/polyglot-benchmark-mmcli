@@ -33,6 +33,7 @@ venv/
 
 # Rust
 # (target/ is already covered above)
+Cargo.lock
 
 # OS generated files
 .DS_Store

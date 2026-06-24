@@ -38,7 +38,31 @@ This file contains a comprehensive list of all benchmarks that the Minovative Mi
   - **AI Model Used**: Gemini 3.1 Flash-Lite
   - **Performance Summary**: The agent successfully engineered a flawless, production-ready mathematical implementation of the Affine Cipher using modular arithmetic, executing a complete PM Kernel orchestration across multiple autonomous thread agents in just 24.0 seconds. The code accurately handles edge cases like preserving digits, filtering strings, and calculating the modular multiplicative inverse (MMI) cleanly. It passed all Gradle tests on the first try without needing self-correction.
 
+## Medium Difficulty (🟠)
+
+### Rust Track
+
+- **[Bowling Game](rust/exercises/practice/bowling/minovative-tries/attempt_1.md)**
+  - **Result**: 🟢 PASSED (31/31 assertions)
+  - **Difficulty**: 🟠 Medium
+  - **AI Model Used**: Gemini 3.1 Flash-Lite
+  - **Performance Summary**: The agent successfully engineered a robust bowling score calculator. It handled complex state management for frames, dynamic scoring lookaheads for strikes and spares, and the intricate edge cases of 10th-frame bonus rolls. It autonomously implemented correct validation logic ensuring no illegal pin counts or premature scoring. The solution flawlessly passed all 31 tests on the first execution.
+
 ## Easy Difficulty (🟢)
+
+### Rust Track
+
+- **[Simple Cipher](rust/exercises/practice/simple-cipher/minovative-tries/attempt_1.md)**
+  - **Result**: 🟢 PASSED (23/23 assertions)
+  - **Difficulty**: 🟢 Easy
+  - **AI Model Used**: Gemini 3.1 Flash-Lite
+  - **Performance Summary**: The agent successfully implemented a substitution cipher using modular arithmetic and Rust's iterator patterns. It autonomously handled key validation, encoding/decoding loops, and integrated the `rand` crate for cryptographically secure random key generation. It passed all 23 tests flawlessly on the first execution and correctly ran the Rust test suite using `cargo test -- --ignored`.
+
+- **[Gigasecond](rust/exercises/practice/gigasecond/minovative-tries/attempt_1.md)**
+  - **Result**: 🟢 PASSED (5/5 assertions)
+  - **Difficulty**: 🟢 Easy
+  - **AI Model Used**: Gemini 3.1 Flash-Lite
+  - **Performance Summary**: The agent accurately implemented the gigasecond calculation by adding exactly $10^9$ seconds to a given `PrimitiveDateTime` using the `time` crate's `Duration`. It successfully handled all time calculation intricacies without manual math and seamlessly integrated with the Rust toolchain to pass all tests on its first run.
 
 ### Java Track
 
