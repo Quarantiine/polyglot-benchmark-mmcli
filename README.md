@@ -58,19 +58,6 @@ For the exact prompt used to enforce these rules during the benchmark, see [prom
 
 ---
 
-## Custom Benchmark Track
-
-While the Exercism tracks focus on core software engineering logic, the benchmark suite is expanding to test the agent's capabilities in advanced STEM domains:
-
-### Robotics & Linear Algebra (ROB101)
-
-- **[ROB101 Benchmark Suite](custom-benchmarks/robotics-benchmarks/README.md)**
-  - **Status**: Work in Progress
-  - **Goal**: Push the agent's capacity as an **autonomous STEM reasoning engine**.
-  - **Details**: Tests the agent against real-world, university-level Computational Linear Algebra projects sourced from the University of Michigan Robotics 101 course. It evaluates the agent's ability to translate raw math formulas into working code and maintain spatial awareness across complex multidimensional arrays.
-
----
-
 ### Source Attribution
 
 This benchmark dataset was originally forked from the [Aider polyglot benchmark](https://aider.chat/2024/12/21/polyglot.html). All exercises in this repository are sourced from the following [Exercism](https://exercism.org) language tracks:
