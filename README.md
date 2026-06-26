@@ -10,7 +10,7 @@ This repository serves as a strict proving ground for the `mmcli` agent.
 
 ## Completed Benchmark Results
 
-*(For a full list of all benchmarks the agent has passed, including easier exercises, see [COMPLETED_BENCHMARKS.md](COMPLETED_BENCHMARKS.md))*
+_(For a full list of all benchmarks the agent has passed, including easier exercises, see [COMPLETED_BENCHMARKS.md](COMPLETED_BENCHMARKS.md))_
 
 Here is a log of the top 4 hardest programming exercises the agent has autonomously completed, alongside a summary of its performance:
 
@@ -64,7 +64,7 @@ While the Exercism tracks focus on core software engineering logic, the benchmar
 
 ### Robotics & Linear Algebra (ROB101)
 
-- **[ROB101 Benchmark Suite](robotics-benchmarks/README.md)**
+- **[ROB101 Benchmark Suite](custom-benchmarks/robotics-benchmarks/README.md)**
   - **Status**: Work in Progress
   - **Goal**: Push the agent's capacity as an **autonomous STEM reasoning engine**.
   - **Details**: Tests the agent against real-world, university-level Computational Linear Algebra projects sourced from the University of Michigan Robotics 101 course. It evaluates the agent's ability to translate raw math formulas into working code and maintain spatial awareness across complex multidimensional arrays.
