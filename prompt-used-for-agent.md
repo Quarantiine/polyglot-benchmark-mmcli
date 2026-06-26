@@ -8,4 +8,4 @@
 4. Ensure your code is production-ready, clever, and highly optimized.
 5. You are strictly forbidden from using web search tools or browsing the internet to look up the solution. You must rely solely on your own reasoning to solve the problem.
 
-When you have finished implementing the solution, run the test file in the tests folder first but remove any ignore or anything related to that so that all tests run, then create a directory called `minovative-tries` if it doesn't already exist. Inside it, create a file named `attempt_[N].md`. In this file, write a detailed explanation of your approach and changes based on your code you just wrote so I have a historical log of your logic.
+When you have finished implementing the solution, run the test file in the tests folder first but remove any ignore or anything related to that so that all tests run, then create a directory called `minovative-tries` if it doesn't already exist. Inside it, create a file named `attempt_[N].md`. In this file, write detailed summaries of your approach, reasoning, changes made, and more based on your code you just wrote. Inform your audience what you did silly!
