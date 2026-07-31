@@ -12,7 +12,7 @@ This repository serves as a strict proving ground for the `mmcli` agent.
 
 _(For a full list of all benchmarks the agent has passed, including easier exercises, see [COMPLETED_BENCHMARKS.md](COMPLETED_BENCHMARKS.md))_
 
-Here is a log of the top 4 hardest programming exercises the agent has autonomously completed, alongside a summary of its performance:
+Here is a log of the top 3 hardest programming exercises the agent has autonomously completed, alongside a summary of its performance:
 
 ### JavaScript Track
 
@@ -22,6 +22,14 @@ Here is a log of the top 4 hardest programming exercises the agent has autonomou
   - **AI Model Used**: Gemini 3.5 Flash
   - **Performance Summary**: The agent engineered a complete reactive state machine. It initially failed complex test cases involving duplicate callback firing and cyclic updates. However, it autonomously debugged its own failures by creating a `debug.log`, reading the Jest stack traces, and self-correcting. It implemented a true Depth-First Search (DFS) topological sort and transactional state snapshots to pass all 13/13 tests. The PM Kernel (Main AI Agent) accurately audited the final code and warned about an $O(n^2)$ nested loop, demonstrating advanced automated code review capabilities.
 
+### Rust Track
+
+- **[React (Reactive System)](rust/exercises/practice/react/minovative-tries/attempt_1.md)**
+  - **Result**: 🟢 PASSED (20/20 assertions)
+  - **Difficulty**: 🩸 Very Hard
+  - **AI Model Used**: Auto (Gemini 3.5 Flash-Lite 7%, Gemini 3.6 Flash 93%)
+  - **Performance Summary**: The agent engineered a complex directed acyclic graph (DAG) based reactive state machine. It successfully navigated the notoriously difficult Rust borrow checker by iterating on compiler errors autonomously. It utilized `std::rc::Rc` and `std::cell::RefCell` to handle the graph's shared mutable state and interior mutability, successfully fixing multiple lifetime and closure-capture errors to pass all 20 tests. The agent completed all 3 execution tasks seamlessly without failure, utilizing 41 autonomous tool actions and 1.91M tokens (1.89M input, 17.5K output).
+
 ### Go Track
 
 - **[Alphametics](go/exercises/practice/alphametics/minovative-tries/attempt_1.md)**
@@ -29,22 +37,6 @@ Here is a log of the top 4 hardest programming exercises the agent has autonomou
   - **Difficulty**: 🩸 Very Hard
   - **AI Model Used**: Gemini 3.5 Flash
   - **Performance Summary**: The agent solved one of the hardest logic puzzles on the platform by engineering a mathematically rigorous pruning algorithm based on the **Rearrangement Inequality**. By doing so, it completely bypassed naive backtracking ($10!$ permutations) to achieve sub-millisecond execution speeds (~140 microseconds) with zero heap allocations during recursion. It autonomously navigated the Go toolchain (`go test -bench=.`) and parsed its own architectural performance warnings.
-
-### C++ Track
-
-- **[All Your Base](cpp/exercises/practice/all-your-base/minovative-tries/attempt_1.md)**
-  - **Result**: 🟢 PASSED (17/17 assertions)
-  - **Difficulty**: 🟡 Hard
-  - **AI Model Used**: Gemini 3.5 Flash
-  - **Performance Summary**: The agent successfully deduced the $O(N + M)$ conversion algorithm and properly handled the complex edge cases for zero-equivalents (returning an empty vector). During execution, it encountered a compilation error due to missing C++ standard library paths on macOS. It autonomously self-corrected by querying the environment, locating the sysroot, updating its `clang++` flags, and flawlessly passing the test suite. It handled the problem and edge cases on the first try. The environment was the main test it had to figure out.
-
-### Java Track
-
-- **[Affine Cipher](java/exercises/practice/affine-cipher/minovative-tries/attempt_1.md)**
-  - **Result**: 🟢 PASSED
-  - **Difficulty**: 🟡 Hard
-  - **AI Model Used**: Gemini 3.1 Flash-Lite
-  - **Performance Summary**: The agent successfully engineered a flawless, production-ready mathematical implementation of the Affine Cipher using modular arithmetic, executing a complete PM Kernel orchestration across multiple autonomous thread agents in just 24.0 seconds. The code accurately handles edge cases like preserving digits, filtering strings, and calculating the modular multiplicative inverse (MMI) cleanly. It passed all Gradle tests on the first try without needing self-correction.
 
 ## How The Agent is Tested (Exercism Tracks Only)
 

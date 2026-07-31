@@ -8,7 +8,6 @@ fn input_cells_have_a_value() {
 }
 
 #[test]
-#[ignore]
 fn an_input_cells_value_can_be_set() {
     let mut reactor = Reactor::new();
     let input = reactor.create_input(4);
@@ -17,7 +16,6 @@ fn an_input_cells_value_can_be_set() {
 }
 
 #[test]
-#[ignore]
 fn error_setting_a_nonexistent_input_cell() {
     let mut dummy_reactor = Reactor::new();
     let input = dummy_reactor.create_input(1);
@@ -25,7 +23,6 @@ fn error_setting_a_nonexistent_input_cell() {
 }
 
 #[test]
-#[ignore]
 fn compute_cells_calculate_initial_value() {
     let mut reactor = Reactor::new();
     let input = reactor.create_input(1);
@@ -36,7 +33,6 @@ fn compute_cells_calculate_initial_value() {
 }
 
 #[test]
-#[ignore]
 fn compute_cells_take_inputs_in_the_right_order() {
     let mut reactor = Reactor::new();
     let one = reactor.create_input(1);
@@ -50,7 +46,6 @@ fn compute_cells_take_inputs_in_the_right_order() {
 }
 
 #[test]
-#[ignore]
 fn error_creating_compute_cell_if_input_doesnt_exist() {
     let mut dummy_reactor = Reactor::new();
     let input = dummy_reactor.create_input(1);
@@ -61,7 +56,6 @@ fn error_creating_compute_cell_if_input_doesnt_exist() {
 }
 
 #[test]
-#[ignore]
 fn do_not_break_cell_if_creating_compute_cell_with_valid_and_invalid_input() {
     let mut dummy_reactor = Reactor::new();
     let _ = dummy_reactor.create_input(1);
@@ -77,7 +71,6 @@ fn do_not_break_cell_if_creating_compute_cell_with_valid_and_invalid_input() {
 }
 
 #[test]
-#[ignore]
 fn compute_cells_update_value_when_dependencies_are_changed() {
     let mut reactor = Reactor::new();
     let input = reactor.create_input(1);
@@ -90,7 +83,6 @@ fn compute_cells_update_value_when_dependencies_are_changed() {
 }
 
 #[test]
-#[ignore]
 fn compute_cells_can_depend_on_other_compute_cells() {
     let mut reactor = Reactor::new();
     let input = reactor.create_input(1);
@@ -161,23 +153,22 @@ impl CallbackRecorder {
 }
 
 #[test]
-#[ignore]
 fn compute_cells_fire_callbacks() {
-    let cb = CallbackRecorder::new();
+    let cb = std::rc::Rc::new(CallbackRecorder::new());
     let mut reactor = Reactor::new();
     let input = reactor.create_input(1);
     let output = reactor
         .create_compute(&[CellId::Input(input)], |v| v[0] + 1)
         .unwrap();
+    let cb_clone = cb.clone();
     assert!(reactor
-        .add_callback(output, |v| cb.callback_called(v))
+        .add_callback(output, move |v| cb_clone.callback_called(v))
         .is_some());
     assert!(reactor.set_value(input, 3));
     cb.expect_to_have_been_called_with(4);
 }
 
 #[test]
-#[ignore]
 fn error_adding_callback_to_nonexistent_cell() {
     let mut dummy_reactor = Reactor::new();
     let input = dummy_reactor.create_input(1);
@@ -191,7 +182,6 @@ fn error_adding_callback_to_nonexistent_cell() {
 }
 
 #[test]
-#[ignore]
 fn error_removing_callback_from_nonexisting_cell() {
     let mut dummy_reactor = Reactor::new();
     let dummy_input = dummy_reactor.create_input(1);
@@ -215,9 +205,8 @@ fn error_removing_callback_from_nonexisting_cell() {
 }
 
 #[test]
-#[ignore]
 fn callbacks_only_fire_on_change() {
-    let cb = CallbackRecorder::new();
+    let cb = std::rc::Rc::new(CallbackRecorder::new());
     let mut reactor = Reactor::new();
     let input = reactor.create_input(1);
     let output = reactor
@@ -226,8 +215,9 @@ fn callbacks_only_fire_on_change() {
             |v| if v[0] < 3 { 111 } else { 222 },
         )
         .unwrap();
+    let cb_clone = cb.clone();
     assert!(reactor
-        .add_callback(output, |v| cb.callback_called(v))
+        .add_callback(output, move |v| cb_clone.callback_called(v))
         .is_some());
 
     assert!(reactor.set_value(input, 2));
@@ -237,16 +227,16 @@ fn callbacks_only_fire_on_change() {
 }
 
 #[test]
-#[ignore]
 fn callbacks_can_be_called_multiple_times() {
-    let cb = CallbackRecorder::new();
+    let cb = std::rc::Rc::new(CallbackRecorder::new());
     let mut reactor = Reactor::new();
     let input = reactor.create_input(1);
     let output = reactor
         .create_compute(&[CellId::Input(input)], |v| v[0] + 1)
         .unwrap();
+    let cb_clone = cb.clone();
     assert!(reactor
-        .add_callback(output, |v| cb.callback_called(v))
+        .add_callback(output, move |v| cb_clone.callback_called(v))
         .is_some());
 
     assert!(reactor.set_value(input, 2));
@@ -256,10 +246,9 @@ fn callbacks_can_be_called_multiple_times() {
 }
 
 #[test]
-#[ignore]
 fn callbacks_can_be_called_from_multiple_cells() {
-    let cb1 = CallbackRecorder::new();
-    let cb2 = CallbackRecorder::new();
+    let cb1 = std::rc::Rc::new(CallbackRecorder::new());
+    let cb2 = std::rc::Rc::new(CallbackRecorder::new());
     let mut reactor = Reactor::new();
     let input = reactor.create_input(1);
     let plus_one = reactor
@@ -268,11 +257,13 @@ fn callbacks_can_be_called_from_multiple_cells() {
     let minus_one = reactor
         .create_compute(&[CellId::Input(input)], |v| v[0] - 1)
         .unwrap();
+    let cb1_clone = cb1.clone();
     assert!(reactor
-        .add_callback(plus_one, |v| cb1.callback_called(v))
+        .add_callback(plus_one, move |v| cb1_clone.callback_called(v))
         .is_some());
+    let cb2_clone = cb2.clone();
     assert!(reactor
-        .add_callback(minus_one, |v| cb2.callback_called(v))
+        .add_callback(minus_one, move |v| cb2_clone.callback_called(v))
         .is_some());
 
     assert!(reactor.set_value(input, 10));
@@ -281,11 +272,10 @@ fn callbacks_can_be_called_from_multiple_cells() {
 }
 
 #[test]
-#[ignore]
 fn callbacks_can_be_added_and_removed() {
-    let cb1 = CallbackRecorder::new();
-    let cb2 = CallbackRecorder::new();
-    let cb3 = CallbackRecorder::new();
+    let cb1 = std::rc::Rc::new(CallbackRecorder::new());
+    let cb2 = std::rc::Rc::new(CallbackRecorder::new());
+    let cb3 = std::rc::Rc::new(CallbackRecorder::new());
 
     let mut reactor = Reactor::new();
     let input = reactor.create_input(11);
@@ -293,11 +283,13 @@ fn callbacks_can_be_added_and_removed() {
         .create_compute(&[CellId::Input(input)], |v| v[0] + 1)
         .unwrap();
 
+    let cb1_clone = cb1.clone();
     let callback = reactor
-        .add_callback(output, |v| cb1.callback_called(v))
+        .add_callback(output, move |v| cb1_clone.callback_called(v))
         .unwrap();
+    let cb2_clone = cb2.clone();
     assert!(reactor
-        .add_callback(output, |v| cb2.callback_called(v))
+        .add_callback(output, move |v| cb2_clone.callback_called(v))
         .is_some());
 
     assert!(reactor.set_value(input, 31));
@@ -305,8 +297,9 @@ fn callbacks_can_be_added_and_removed() {
     cb2.expect_to_have_been_called_with(32);
 
     assert!(reactor.remove_callback(output, callback).is_ok());
+    let cb3_clone = cb3.clone();
     assert!(reactor
-        .add_callback(output, |v| cb3.callback_called(v))
+        .add_callback(output, move |v| cb3_clone.callback_called(v))
         .is_some());
 
     assert!(reactor.set_value(input, 41));
@@ -316,21 +309,22 @@ fn callbacks_can_be_added_and_removed() {
 }
 
 #[test]
-#[ignore]
 fn removing_a_callback_multiple_times_doesnt_interfere_with_other_callbacks() {
-    let cb1 = CallbackRecorder::new();
-    let cb2 = CallbackRecorder::new();
+    let cb1 = std::rc::Rc::new(CallbackRecorder::new());
+    let cb2 = std::rc::Rc::new(CallbackRecorder::new());
 
     let mut reactor = Reactor::new();
     let input = reactor.create_input(1);
     let output = reactor
         .create_compute(&[CellId::Input(input)], |v| v[0] + 1)
         .unwrap();
+    let cb1_clone = cb1.clone();
     let callback = reactor
-        .add_callback(output, |v| cb1.callback_called(v))
+        .add_callback(output, move |v| cb1_clone.callback_called(v))
         .unwrap();
+    let cb2_clone = cb2.clone();
     assert!(reactor
-        .add_callback(output, |v| cb2.callback_called(v))
+        .add_callback(output, move |v| cb2_clone.callback_called(v))
         .is_some());
     // We want the first remove to be Ok, but the others should be errors.
     assert!(reactor.remove_callback(output, callback).is_ok());
@@ -347,9 +341,8 @@ fn removing_a_callback_multiple_times_doesnt_interfere_with_other_callbacks() {
 }
 
 #[test]
-#[ignore]
 fn callbacks_should_only_be_called_once_even_if_multiple_dependencies_change() {
-    let cb = CallbackRecorder::new();
+    let cb = std::rc::Rc::new(CallbackRecorder::new());
     let mut reactor = Reactor::new();
     let input = reactor.create_input(1);
     let plus_one = reactor
@@ -367,17 +360,17 @@ fn callbacks_should_only_be_called_once_even_if_multiple_dependencies_change() {
             |v| v[0] * v[1],
         )
         .unwrap();
+    let cb_clone = cb.clone();
     assert!(reactor
-        .add_callback(output, |v| cb.callback_called(v))
+        .add_callback(output, move |v| cb_clone.callback_called(v))
         .is_some());
     assert!(reactor.set_value(input, 4));
     cb.expect_to_have_been_called_with(10);
 }
 
 #[test]
-#[ignore]
 fn callbacks_should_not_be_called_if_dependencies_change_but_output_value_doesnt_change() {
-    let cb = CallbackRecorder::new();
+    let cb = std::rc::Rc::new(CallbackRecorder::new());
     let mut reactor = Reactor::new();
     let input = reactor.create_input(1);
     let plus_one = reactor
@@ -392,8 +385,9 @@ fn callbacks_should_not_be_called_if_dependencies_change_but_output_value_doesnt
             |v| v[0] - v[1],
         )
         .unwrap();
+    let cb_clone = cb.clone();
     assert!(reactor
-        .add_callback(always_two, |v| cb.callback_called(v))
+        .add_callback(always_two, move |v| cb_clone.callback_called(v))
         .is_some());
     for i in 2..5 {
         assert!(reactor.set_value(input, i));
@@ -402,7 +396,6 @@ fn callbacks_should_not_be_called_if_dependencies_change_but_output_value_doesnt
 }
 
 #[test]
-#[ignore]
 fn adder_with_boolean_values() {
     // This is a digital logic circuit called an adder:
     // https://en.wikipedia.org/wiki/Adder_(electronics)
