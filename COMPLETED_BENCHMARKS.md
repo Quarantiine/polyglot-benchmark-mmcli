@@ -48,6 +48,12 @@ This file contains a comprehensive list of all benchmarks that the Minovative Mi
 
 ### Python Track
 
+- **[React (Reactive System)](python/exercises/practice/react/minovative-tries/attempt_1.md)**
+  - **Result**: 🟢 PASSED (14/14 assertions)
+  - **Difficulty**: 🟡 Hard
+  - **AI Model Used**: Gemini 3.5 Flash-Lite
+  - **Performance Summary**: The agent successfully engineered a glitch-free reactive programming system modeled as a Directed Acyclic Graph (DAG). It correctly deduced that preventing redundant updates (glitches) required a topological sort and implemented Kahn's algorithm via Breadth-First Search. It gracefully handled callback suppression by implementing pre-propagation snapshots and successfully executed all 14 unit tests on its very first attempt in just 148 seconds.
+
 - **[Zebra Puzzle](python/exercises/practice/zebra-puzzle/minovative-tries/attempt_1.md)**
   - **Result**: 🟢 PASSED
   - **Difficulty**: 🟡 Hard
