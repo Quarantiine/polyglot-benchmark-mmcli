@@ -56,6 +56,14 @@ This file contains a comprehensive list of all benchmarks that the Minovative Mi
 
 ## Hard Difficulty (🟡)
 
+### Go Track
+
+- **[Book Store](go/exercises/practice/book-store/minovative-tries/attempt_1.md)**
+  - **Result**: 🟢 PASSED (18/18 test cases)
+  - **Difficulty**: 🟡 Hard
+  - **AI Model Used**: Gemini 3.5 Flash-Lite
+  - **Performance Summary**: The agent successfully engineered a dynamic programming solution with memoization to find the minimum possible total cost for a basket of books. It correctly identified that simple greedy algorithms fail on certain edge cases (e.g., two groups of 4 books are cheaper than a group of 5 and 3), and formulated the remaining book counts as a normalized recursive state. It expertly handled frequency counting and subset exploration, passing all 18 test cases and benchmarks on its very first execution wave without requiring any debugging iterations.
+
 ### C++ Track
 
 - **[All Your Base](cpp/exercises/practice/all-your-base/minovative-tries/attempt_1.md)**
