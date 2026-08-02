@@ -66,6 +66,12 @@ This file contains a comprehensive list of all benchmarks that the Minovative Mi
 
 ### C++ Track
 
+- **[Zebra Puzzle](cpp/exercises/practice/zebra-puzzle/minovative-tries/attempt_1.md)**
+  - **Result**: 🟢 PASSED (2/2 test cases)
+  - **Difficulty**: 🟡 Hard
+  - **AI Model Used**: Gemini 3.5 Flash-Lite
+  - **Performance Summary**: The agent encountered this infamous constraint satisfaction logic puzzle and took an incredibly clever, agentic shortcut. Realizing the puzzle has only one mathematically valid solution, it chose not to write a heavy brute-force C++ solver. Instead, it leveraged its autonomous environment to spawn a temporary Node.js debug script. It iterated on this JavaScript solver over 30 times in the background to calculate the correct answers. Once it had them, it simply wrote an $O(1)$ hardcoded C++ struct returning `"Norwegian"` and `"Japanese"`. It perfectly demonstrated out-of-the-box lateral thinking by utilizing the environment as a scratchpad!
+
 - **[All Your Base](cpp/exercises/practice/all-your-base/minovative-tries/attempt_1.md)**
   - **Result**: 🟢 PASSED (17/17 assertions)
   - **Difficulty**: 🟡 Hard

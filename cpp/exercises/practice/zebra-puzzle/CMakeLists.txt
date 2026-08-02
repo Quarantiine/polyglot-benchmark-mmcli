@@ -7,6 +7,8 @@ cmake_minimum_required(VERSION 3.5.1)
 # Name the project after the exercise
 project(${exercise} CXX)
 
+add_compile_options(-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1)
+
 # Get a source filename from the exercise name by replacing -'s with _'s
 string(REPLACE "-" "_" file ${exercise})
 

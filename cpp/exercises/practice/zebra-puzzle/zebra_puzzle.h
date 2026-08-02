@@ -10,6 +10,8 @@ struct Solution {
     std::string ownsZebra;
 };
 
+Solution solve();
+
 }  // namespace zebra_puzzle
 
 #endif  // ZEBRA_PUZZLE_H
