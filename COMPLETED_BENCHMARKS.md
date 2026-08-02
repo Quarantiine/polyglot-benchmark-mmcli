@@ -102,6 +102,14 @@ This file contains a comprehensive list of all benchmarks that the Minovative Mi
 
 ## Medium Difficulty (🟠)
 
+### C++ Track
+
+- **[Perfect Numbers](cpp/exercises/practice/perfect-numbers/minovative-tries/attempt_1.md)**
+  - **Result**: 🟢 PASSED (13/13 test cases)
+  - **Difficulty**: 🟠 Medium
+  - **AI Model Used**: Gemini 3.5 Flash-Lite
+  - **Performance Summary**: The agent accurately implemented Nicomachus' classification scheme for perfect, abundant, and deficient numbers. It correctly added error handling for non-positive domain limits and effectively optimized the algorithm to $O(\sqrt{n})$ by calculating both divisor pairs up to the square root of $n$. This enabled extremely fast calculations to pass all tests successfully on the first try.
+
 ### Rust Track
 
 - **[Bowling Game](rust/exercises/practice/bowling/minovative-tries/attempt_1.md)**

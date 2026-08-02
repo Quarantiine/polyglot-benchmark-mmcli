@@ -15,7 +15,7 @@ TEST_CASE("Smallest perfect number is classified correctly", "[163e8e86-7bfd-4ee
 	REQUIRE(perfect_numbers::classification::perfect == perfect_numbers::classify(6));
 }
 
-#if defined(EXERCISM_RUN_ALL_TESTS)
+// #if defined(EXERCISM_RUN_ALL_TESTS)
 
 TEST_CASE("Medium perfect number is classified correctly", "[169a7854-0431-4ae0-9815-c3b6d967436d]") {
 	REQUIRE(perfect_numbers::classification::perfect == perfect_numbers::classify(28));
@@ -65,4 +65,4 @@ TEST_CASE("Negative integer is rejected (as it is not a positive integer)", "[2d
 	REQUIRE_THROWS_AS(perfect_numbers::classify(-1),std::domain_error);
 }
 
-#endif
+// #endif
