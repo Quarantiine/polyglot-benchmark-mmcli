@@ -4,6 +4,14 @@ This file contains a comprehensive list of all benchmarks that the Minovative Mi
 
 ## Extreme Difficulty (🩸)
 
+### Java Track
+
+- **[Poker (Hand Evaluator)](java/exercises/practice/poker/minovative-tries/attempt_1.md)**
+  - **Result**: 🟢 PASSED 
+  - **Difficulty**: 🩸 Very Hard
+  - **AI Model Used**: Gemini 3.5 Flash-Lite
+  - **Performance Summary**: The agent successfully engineered a complete poker hand evaluator capable of correctly ranking hands and breaking complex multi-way ties. It impeccably handled the notorious "Ace-low Straight" edge case (`A, 5, 4, 3, 2`) and properly implemented frequency-based tie-breakers (e.g., comparing the pair values first, then the kickers). Astoundingly, it wrote this massive block of parsing, sorting, and scoring logic perfectly on its very first try, passing the entire Gradle test suite without a single debugging iteration in just 80 seconds.
+
 ### JavaScript Track
 
 - **[React (Reactive System)](javascript/exercises/practice/react/minovative-tries/attempt_1.md)**
@@ -14,6 +22,18 @@ This file contains a comprehensive list of all benchmarks that the Minovative Mi
 
 ### Rust Track
 
+- **[Doubly Linked List (Unsafe)](rust/exercises/practice/doubly-linked-list/minovative-tries/attempt_1.md)**
+  - **Result**: 🟢 PASSED (All leak tests & compile-fail checks)
+  - **Difficulty**: 🩸 Very Hard
+  - **AI Model Used**: Gemini 3.5 Flash-Lite
+  - **Performance Summary**: The agent successfully engineered a production-ready, `unsafe` doubly linked list in Rust using `NonNull<Node<T>>`. It expertly navigated advanced Rust concepts including raw pointer mutation, manual `Drop` implementations to prevent stack overflows and memory leaks, and covariance/thread-safety via `PhantomData`, `Send`, and `Sync`. While the agent struggled slightly with syntax errors when un-ignoring tests (requiring multiple self-corrections), it autonomously resolved them, executed custom debug scripts, and eventually passed the entire massive test suite (including strict memory leak tests) perfectly. This is arguably the most difficult systems programming challenge in the benchmark.
+
+- **[Alphametics](rust/exercises/practice/alphametics/minovative-tries/attempt_1.md)**
+  - **Result**: 🟢 PASSED (10/10 assertions)
+  - **Difficulty**: 🩸 Very Hard
+  - **AI Model Used**: Gemini 3.5 Flash-Lite
+  - **Performance Summary**: The agent solved one of the hardest logic puzzles by engineering a mathematically rigorous pruning algorithm. Instead of using a naive brute-force backtracking approach ($10!$ permutations), the agent independently utilized linear equation coefficient reduction, magnitude-sorted variable ordering for heuristic pruning, and an efficient 16-bit integer bitmask for digit tracking. It successfully passed all 10 tests, including a massive 199-addend puzzle, in just ~0.48s in a single execution wave lasting 49.3 seconds.
+
 - **[React (Reactive System)](rust/exercises/practice/react/minovative-tries/attempt_1.md)**
   - **Result**: 🟢 PASSED (20/20 assertions)
   - **Difficulty**: 🩸 Very Hard
@@ -21,6 +41,12 @@ This file contains a comprehensive list of all benchmarks that the Minovative Mi
   - **Performance Summary**: The agent engineered a complex directed acyclic graph (DAG) based reactive state machine. It successfully navigated the notoriously difficult Rust borrow checker by iterating on compiler errors autonomously. It utilized `std::rc::Rc` and `std::cell::RefCell` to handle the graph's shared mutable state and interior mutability, successfully fixing multiple lifetime and closure-capture errors to pass all 20 tests. The agent completed all 3 execution tasks seamlessly without failure, utilizing 41 autonomous tool actions and 1.91M tokens (1.89M input, 17.5K output).
 
 ### Go Track
+
+- **[Forth (Evaluator)](go/exercises/practice/forth/minovative-tries/attempt_1.md)**
+  - **Result**: 🟢 PASSED
+  - **Difficulty**: 🩸 Very Hard
+  - **AI Model Used**: Gemini 3.5 Flash-Lite
+  - **Performance Summary**: The agent successfully engineered a complete Forth language evaluator, complete with a numeric stack, arithmetic operations, and a dynamic user-defined word dictionary. It correctly implemented definition-time word expansion to handle the incredibly tricky edge cases of variable shadowing and overriding built-in operators. Notably, the agent initially failed the test suite, but autonomously executed a self-correction loop: it spawned temporary Node.js debug scripts to isolate and test logic, repeatedly refined the Go implementation, and eventually passed all tests perfectly. It utilized ~1.07M tokens over an 89-second orchestration.
 
 - **[Alphametics](go/exercises/practice/alphametics/minovative-tries/attempt_1.md)**
   - **Result**: 🟢 PASSED
