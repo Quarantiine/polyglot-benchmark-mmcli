@@ -110,6 +110,14 @@ This file contains a comprehensive list of all benchmarks that the Minovative Mi
   - **AI Model Used**: Gemini 3.5 Flash-Lite
   - **Performance Summary**: The agent accurately implemented Nicomachus' classification scheme for perfect, abundant, and deficient numbers. It correctly added error handling for non-positive domain limits and effectively optimized the algorithm to $O(\sqrt{n})$ by calculating both divisor pairs up to the square root of $n$. This enabled extremely fast calculations to pass all tests successfully on the first try.
 
+### JavaScript Track
+
+- **[Ledger](javascript/exercises/practice/ledger/minovative-tries/attempt_1.md)**
+  - **Result**: 🟢 PASSED (11/11 test cases)
+  - **Difficulty**: 🟠 Medium
+  - **AI Model Used**: Gemini 3.5 Flash-Lite
+  - **Performance Summary**: The agent successfully engineered the Ledger formatting module, correctly implementing multi-tiered sorting (date, change magnitude, and description). It expertly handled localization edge cases across `en-US` and `nl-NL` locales, properly utilizing non-breaking spaces, parentheses for negative currencies, and custom date string formats. All 11 tests passed successfully on its very first orchestration wave.
+
 ### Rust Track
 
 - **[Bowling Game](rust/exercises/practice/bowling/minovative-tries/attempt_1.md)**
