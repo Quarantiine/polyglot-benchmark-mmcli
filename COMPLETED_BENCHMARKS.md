@@ -118,6 +118,12 @@ This file contains a comprehensive list of all benchmarks that the Minovative Mi
   - **AI Model Used**: Gemini 3.5 Flash-Lite
   - **Performance Summary**: The agent successfully engineered the Ledger formatting module, correctly implementing multi-tiered sorting (date, change magnitude, and description). It expertly handled localization edge cases across `en-US` and `nl-NL` locales, properly utilizing non-breaking spaces, parentheses for negative currencies, and custom date string formats. All 11 tests passed successfully on its very first orchestration wave.
 
+- **[Complex Numbers](javascript/exercises/practice/complex-numbers/minovative-tries/attempt_1.md)**
+  - **Result**: 🟢 PASSED (31/31 test cases)
+  - **Difficulty**: 🟠 Medium
+  - **AI Model Used**: Gemini 3.5 Flash-Lite
+  - **Performance Summary**: The agent successfully implemented a comprehensive `ComplexNumber` math class. It expertly handled arithmetic operations, conjugates, absolute values, and complex exponentiation using Euler's formula. Furthermore, it accurately addressed tricky floating-point edge cases, such as normalizing `-0` (negative zero) to `0` to satisfy strict equality assertions during Jest testing. All 31 tests passed successfully on the first execution wave.
+
 ### Rust Track
 
 - **[Bowling Game](rust/exercises/practice/bowling/minovative-tries/attempt_1.md)**
