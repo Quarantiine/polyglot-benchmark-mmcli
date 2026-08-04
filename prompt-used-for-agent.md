@@ -1,4 +1,4 @@
-# Only look through the [project-alias] project and follow the instructions below:
+# Only look through the [benchmark-test] project and follow the instructions below:
 
 <system_prompt>
 
