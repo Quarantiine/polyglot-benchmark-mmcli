@@ -110,6 +110,12 @@ This file contains a comprehensive list of all benchmarks that the Minovative Mi
   - **AI Model Used**: Gemini 3.5 Flash-Lite
   - **Performance Summary**: The agent accurately implemented Nicomachus' classification scheme for perfect, abundant, and deficient numbers. It correctly added error handling for non-positive domain limits and effectively optimized the algorithm to $O(\sqrt{n})$ by calculating both divisor pairs up to the square root of $n$. This enabled extremely fast calculations to pass all tests successfully on the first try.
 
+- **[Queen Attack](cpp/exercises/practice/queen-attack/minovative-tries/attempt_1.md)**
+  - **Result**: 🟢 PASSED (14/14 test cases)
+  - **Difficulty**: 🟠 Medium
+  - **AI Model Used**: Gemini 3.5 Flash-Lite
+  - **Performance Summary**: The agent successfully engineered the `chess_board` class within the `queen_attack` namespace, accurately implementing bounds checking and validation to ensure the two queens do not occupy the same square (throwing `std::domain_error` appropriately). It correctly deduced the logic for queen attacks across rows, columns, and diagonals, passing all 14 test cases successfully on its very first orchestration wave.
+
 ### JavaScript Track
 
 - **[Ledger](javascript/exercises/practice/ledger/minovative-tries/attempt_1.md)**
