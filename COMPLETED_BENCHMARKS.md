@@ -1,13 +1,13 @@
 # All Completed Benchmarks
 
-This file contains a comprehensive list of all benchmarks that the Minovative Mind CLI (`mmcli`) agent has successfully passed. The top 3 hardest benchmarks are also highlighted on the main [`README.md`](README.md).
+This file contains a comprehensive list of all benchmarks that the Minovative Mind CLI (`mmcli`) agent has successfully passed.
 
 ## Extreme Difficulty (🩸)
 
 ### Java Track
 
 - **[Poker (Hand Evaluator)](java/exercises/practice/poker/minovative-tries/attempt_1.md)**
-  - **Result**: 🟢 PASSED 
+  - **Result**: 🟢 PASSED
   - **Difficulty**: 🩸 Very Hard
   - **AI Model Used**: Gemini 3.5 Flash-Lite
   - **Performance Summary**: The agent successfully engineered a complete poker hand evaluator capable of correctly ranking hands and breaking complex multi-way ties. It impeccably handled the notorious "Ace-low Straight" edge case (`A, 5, 4, 3, 2`) and properly implemented frequency-based tie-breakers (e.g., comparing the pair values first, then the kickers). Astoundingly, it wrote this massive block of parsing, sorting, and scoring logic perfectly on its very first try, passing the entire Gradle test suite without a single debugging iteration in just 80 seconds.
