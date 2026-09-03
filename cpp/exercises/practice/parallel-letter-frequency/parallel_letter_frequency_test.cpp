@@ -19,7 +19,6 @@ TEST_CASE("no texts",
     CHECK(freqs.empty());
 }
 
-#if defined(EXERCISM_RUN_ALL_TESTS)
 TEST_CASE("one text with one letter",
           "[calculateFrequencies][818031be-49dc-4675-b2f9-c4047f638a2a]") {
     std::vector<std::string_view> const texts = {
@@ -453,7 +452,6 @@ TEST_CASE("many small texts",
     CHECK(freqs['b'] == 100);
     CHECK(freqs['c'] == 150);
 }
-#endif
 
 #if defined(EXERCISM_INCLUDE_BENCHMARK)
 TEST_CASE("benchmark") {

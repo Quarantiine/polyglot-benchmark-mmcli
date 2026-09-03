@@ -44,3 +44,5 @@ Cargo.lock
 ehthumbs.db
 Thumbs.db
 .minovativemind/
+.tmp/
+scratch/

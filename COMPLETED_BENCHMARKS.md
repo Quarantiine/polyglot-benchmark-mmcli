@@ -60,6 +60,12 @@ This file contains a comprehensive list of all benchmarks that the Minovative Mi
   - **AI Model Used**: Gemini 3.5 Flash
   - **Performance Summary**: The agent solved one of the hardest logic puzzles on the platform by engineering a mathematically rigorous pruning algorithm based on the **Rearrangement Inequality**. By doing so, it completely bypassed naive backtracking ($10!$ permutations) to achieve sub-millisecond execution speeds (~140 microseconds) with zero heap allocations during recursion. It autonomously navigated the Go toolchain (`go test -bench=.`) and parsed its own architectural performance warnings.
 
+- **[React (Reactive System)](go/exercises/practice/react/minovative-tries/attempt_1.md)**
+  - **Result**: 🟢 PASSED (13/13 test cases)
+  - **Difficulty**: 🩸 Very Hard
+  - **AI Model Used**: Auto (Gemini 3.5 Flash-Lite 14%, Gemini 3.7 Flash 86%)
+  - **Performance Summary**: The agent engineered a reactive programming engine in Go based on a Directed Acyclic Graph (DAG) with topological depth level ordering and min-heap priority queue propagation (`container/heap`). This design mathematically eliminated transient glitch states and redundant computations in diamond topologies. It implemented stable-state deferred callbacks that fire strictly after cell value settlement, and ensured idempotent callback cancellation with 0 race conditions (`go test -race`). All 13 unit tests passed on the first attempt.
+
 ## Hard Difficulty (🟡)
 
 ### Go Track
@@ -83,6 +89,12 @@ This file contains a comprehensive list of all benchmarks that the Minovative Mi
   - **Difficulty**: 🟡 Hard
   - **AI Model Used**: Gemini 3.5 Flash
   - **Performance Summary**: The agent successfully deduced the $O(N + M)$ conversion algorithm and properly handled the complex edge cases for zero-equivalents (returning an empty vector). During execution, it encountered a compilation error due to missing C++ standard library paths on macOS. It autonomously self-corrected by querying the environment, locating the sysroot, updating its `clang++` flags, and flawlessly passing the test suite. It handled the problem and edge cases on the first try. The environment was the main test it had to figure out.
+
+- **[Parallel Letter Frequency](cpp/exercises/practice/parallel-letter-frequency/minovative-tries/attempt_1.md)**
+  - **Result**: 🟢 PASSED (13/13 test cases)
+  - **Difficulty**: 🟡 Hard
+  - **AI Model Used**: Auto (Gemini 3.5 Flash-Lite 13%, Gemini 3.7 Flash 87%)
+  - **Performance Summary**: The agent engineered an adaptive, high-performance multithreaded character frequency calculator in modern C++17. To maximize throughput, it implemented zero-copy `std::string_view` dynamic chunking and allocated cache-aligned (`alignas(64)`) thread-local frequency buffers to eliminate CPU cache bounce and false-sharing contention. It intelligently included sequential fallbacks for small workloads (< 1024 chars) and utilized the calling main thread for work execution. All 13 test cases (64 assertions) passed flawlessly with ~189 µs mean benchmark execution time.
 
 ### Java Track
 
