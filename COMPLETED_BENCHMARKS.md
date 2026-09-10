@@ -148,6 +148,14 @@ This file contains a comprehensive list of all benchmarks that the Minovative Mi
   - **AI Model Used**: Gemini 3.5 Flash-Lite
   - **Performance Summary**: The agent successfully implemented a comprehensive `ComplexNumber` math class. It expertly handled arithmetic operations, conjugates, absolute values, and complex exponentiation using Euler's formula. Furthermore, it accurately addressed tricky floating-point edge cases, such as normalizing `-0` (negative zero) to `0` to satisfy strict equality assertions during Jest testing. All 31 tests passed successfully on the first execution wave.
 
+### Go Track
+
+- **[Crypto Square](go/exercises/practice/crypto-square/minovative-tries/attempt_1.md)**
+  - **Result**: 🟢 PASSED (20/20 test cases)
+  - **Difficulty**: 🟠 Medium
+  - **AI Model Used**: Gemini 3.5 Flash-Lite
+  - **Performance Summary**: The agent engineered a multi-stage deterministic pipeline in Go to implement the classic Crypto Square transposition cipher. It optimized rectangle dimension determination ($r \times c$) using an exact integer root search to prevent floating-point precision or rounding errors. To maximize memory efficiency, it pre-allocated the output buffer (`strings.Builder`) with exact capacity ($c \times r + (c - 1)$), achieving zero-reallocation string building. All unit tests and benchmarks passed on the very first try.
+
 ### Rust Track
 
 - **[Bowling Game](rust/exercises/practice/bowling/minovative-tries/attempt_1.md)**
