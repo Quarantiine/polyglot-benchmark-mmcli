@@ -12,6 +12,12 @@ This file contains a comprehensive list of all benchmarks that the Minovative Mi
   - **AI Model Used**: Gemini 3.5 Flash-Lite
   - **Performance Summary**: The agent successfully engineered a complete poker hand evaluator capable of correctly ranking hands and breaking complex multi-way ties. It impeccably handled the notorious "Ace-low Straight" edge case (`A, 5, 4, 3, 2`) and properly implemented frequency-based tie-breakers (e.g., comparing the pair values first, then the kickers). Astoundingly, it wrote this massive block of parsing, sorting, and scoring logic perfectly on its very first try, passing the entire Gradle test suite without a single debugging iteration in just 80 seconds.
 
+- **[React (Reactive System)](java/exercises/practice/react/minovative-tries/attempt_1.md)**
+  - **Result**: 🟢 PASSED (14/14 test cases)
+  - **Difficulty**: 🩸 Very Hard
+  - **AI Model Used**: Auto (Gemini 3.5 Flash-Lite 10%, Gemini 3.8 Flash 90%)
+  - **Performance Summary**: The agent engineered a complete reactive programming system in Java modeled as a topological level-stratified Directed Acyclic Graph (DAG). It implemented a 4-phase propagation engine featuring BFS downstream reachability discovery, pre-mutation stable state snapshots (`IdentityHashMap`), topological recomputation by cell depth level to eliminate intermediate glitches, and post-stabilization change callback dispatching. Defensive snapshotting prevented `ConcurrentModificationException` during callback self-deregistration. All 14 tests in the Gradle test suite passed on the first attempt.
+
 ### JavaScript Track
 
 - **[React (Reactive System)](javascript/exercises/practice/react/minovative-tries/attempt_1.md)**
