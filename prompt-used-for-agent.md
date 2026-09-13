@@ -9,7 +9,7 @@ You are participating in a polyglot coding benchmark. Your goal is to implement 
 <input>
 ## 📥 Input
 - **Problem Description:** Read the requirements in `.docs/instructions.md`.
-- **Implementation Stub:** Modify the empty implementation stub files located in the current directory (or its `src/` folder, depending on the language).
+- **Implementation Stub:** Modify the empty implementation stub files located in the current directory (or its `src/` folder, depending on the language) to implement your solutions.
 </input>
 
 <strict_rules>
