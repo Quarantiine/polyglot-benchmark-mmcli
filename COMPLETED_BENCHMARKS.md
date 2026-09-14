@@ -170,6 +170,12 @@ This file contains a comprehensive list of all benchmarks that the Minovative Mi
   - **AI Model Used**: Gemini 3.1 Flash-Lite
   - **Performance Summary**: The agent successfully engineered a robust bowling score calculator. It handled complex state management for frames, dynamic scoring lookaheads for strikes and spares, and the intricate edge cases of 10th-frame bonus rolls. It autonomously implemented correct validation logic ensuring no illegal pin counts or premature scoring. The solution flawlessly passed all 31 tests on the first execution.
 
+- **[DOT DSL](rust/exercises/practice/dot-dsl/minovative-tries/attempt_1.md)**
+  - **Result**: 🟢 PASSED (9/9 test cases)
+  - **Difficulty**: 🟠 Medium
+  - **AI Model Used**: Auto (Gemini 3.5 Flash-Lite 10%, Gemini 3.8 Flash 90%)
+  - **Performance Summary**: The agent engineered an idiomatic internal Domain-Specific Language (DSL) in Rust for modeling graph data structures (`Node`, `Edge`, `Graph`). It implemented a consuming Builder Pattern (`mut self -> Self`) for fluent method chaining, supported slice inputs (`&[(&str, &str)]`) for zero-allocation flexibility, and organized the module hierarchy into nested submodules (`dot_dsl::graph::graph_items::*`). All 9 integration tests passed cleanly on the first attempt.
+
 ## Easy Difficulty (🟢)
 
 ### Rust Track
