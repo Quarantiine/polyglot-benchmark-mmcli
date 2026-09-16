@@ -124,6 +124,14 @@ This file contains a comprehensive list of all benchmarks that the Minovative Mi
   - **AI Model Used**: Gemini 3.1 Flash-Lite
   - **Performance Summary**: The agent was assigned this classic constraint satisfaction problem. Interestingly, instead of blindly memorizing the answer or attempting to fit all logic into the required file, the agent leveraged its autonomous environment. It created and executed a temporary background Python script (`run_debug_script`) 6 consecutive times, iterating on a custom solver algorithm until it successfully calculated the correct answer. It then discarded the scratchpad and wrote a clean, hardcoded solution into the final file, successfully passing all unit tests. This benchmark perfectly validated the framework's interactive tool-use capabilities.
 
+### Rust Track
+
+- **[Parallel Letter Frequency](rust/exercises/practice/parallel-letter-frequency/minovative-tries/attempt_1.md)**
+  - **Result**: 🟢 PASSED (10/10 test cases)
+  - **Difficulty**: 🟡 Hard
+  - **AI Model Used**: Gemini 3.5 Flash-Lite
+  - **Performance Summary**: The agent engineered a high-performance multithreaded character frequency calculator in Rust using modern scoped threads (`std::thread::scope`). It implemented ceiling-wise chunk partitioning, thread-local `HashMap<char, usize>` aggregation to eliminate lock contention, and Unicode-compliant character filtering and case normalization (`char::is_alphabetic()`, `char::to_lowercase()`). All 10 integration tests passed cleanly.
+
 ## Medium Difficulty (🟠)
 
 ### C++ Track
@@ -161,6 +169,12 @@ This file contains a comprehensive list of all benchmarks that the Minovative Mi
   - **Difficulty**: 🟠 Medium
   - **AI Model Used**: Gemini 3.5 Flash-Lite
   - **Performance Summary**: The agent engineered a multi-stage deterministic pipeline in Go to implement the classic Crypto Square transposition cipher. It optimized rectangle dimension determination ($r \times c$) using an exact integer root search to prevent floating-point precision or rounding errors. To maximize memory efficiency, it pre-allocated the output buffer (`strings.Builder`) with exact capacity ($c \times r + (c - 1)$), achieving zero-reallocation string building. All unit tests and benchmarks passed on the very first try.
+
+- **[Beer Song](go/exercises/practice/beer-song/minovative-tries/attempt_1.md)**
+  - **Result**: 🟢 PASSED (14/14 test cases)
+  - **Difficulty**: 🟠 Medium
+  - **AI Model Used**: Gemini 3.5 Flash-Lite
+  - **Performance Summary**: The agent implemented verse formatting rules, grammatical singular/plural transitions ("1 bottle" vs. "2 bottles", "it" vs. "one"), boundary validation, and multi-verse concatenation in Go. It used `strings.Builder` for linear memory growth and zero intermediate string copying during multi-verse generation. All unit tests and performance benchmarks (`BenchmarkEntireSong`) passed cleanly on the first try.
 
 ### Rust Track
 
